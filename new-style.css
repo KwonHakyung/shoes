@@ -1,0 +1,215 @@
+/* 베이스 */
+@font-face {
+  font-family: 'nanum';
+  src: url(font/NanumSquareR.woff);
+}
+* {box-sizing: border-box;}
+
+body {
+  font-family: 'nanum';
+  margin: 0;
+}
+
+html {line-height: 1.15;} /*기본 행간 높이*/
+
+/* 단일 스타일 */
+
+.color {color: white;}
+
+/* 상단메뉴 */
+
+.nav-container {
+  display: flex;
+  background: gray;
+}
+
+.nav-item {
+  padding:20px;
+  font-weight: 600;
+  color: white;
+}
+
+/* 메인배경 */
+
+.main-background {
+  background-image: url(img/shoes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  padding: 1px;
+}
+
+/* 메인 - 타이틀문구1 */
+
+.main-title {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+/* 메인 - 타이틀문구2 */
+
+.main-content {
+  text-align: center;
+  margin: 20px;
+}
+
+/* 구매하기버튼 */
+
+.main-buttom {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  width: 150px;
+  padding: 15px;
+  font-size: 20px;
+}
+
+/* 설명박스 */
+
+.explain-box {
+  background: #cbd8cc;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  padding: 30px;
+  margin: auto;
+  position: relative;
+  top: -50px;
+}
+
+/* 로그인창 폼 */
+
+.form-backgorund {
+  background-color: tan;
+  padding: 30px;
+}
+
+.form-white {
+  background-color: white;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid gray;
+  }
+
+.name-box {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+
+.send-button {
+  border: none;
+  background: #cbd8cc;
+  padding: 5px;
+}
+
+.box-padding {
+  padding: 10px;
+}
+
+/* 사이드 타이틀 박스 */
+
+.product-container {
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.product-menu {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+input {
+  cursor: pointer;
+}
+
+.product-container i {
+  background-color: burlywood;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  padding-top: 25px;
+  margin-top: 30px;
+  color: white;
+}
+
+/* 상품 진열 레이아웃*/
+
+.shop-bg {
+  background-color: #eee;
+  padding: 20px;
+}
+
+.shop-container {
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.shop-item {
+  width: 33%;
+  padding: 10px;
+}
+
+.shop-item img {
+  width: 100%;
+  display: block; 
+  /* 오버레이로 백그라운드 블랙 컬러 줬을 때 블랙과 신말이지 서로 크기가 맞지않아서 디스플레이 블럭 줌*/
+}
+
+.overlay-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /*넘치는 부분을 숨겨줌*/
+} /*투명박스*/
+
+.overlay-black {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  margin-top: 100%;
+  transition: all 1s;
+  padding: 30px;
+  line-height: 0;
+  color: white;
+}
+
+.overlay-wrap:hover .overlay-black{
+  margin-top: 50%;
+}
+/*오버레이 랩에 마우스대면 오버레이 블랙이 나오게*/
+
+/* 미디어 스크린 사이즈 최하단에 위치 */
+@media screen and (max-width: 1200px) {
+  .main-title {font-size: 30px;}
+  .main-content {font-size: 15px;}
+  .product-container div {width: 50%;}
+  .product-container {max-width: 700px;}
+}
+
+@media screen and (max-width: 768px) {
+  .main-title {font-size: 20px;}
+  .main-content {font-size: 10px;}
+  .product-container div {width: 100%;}
+  .name-box {width: 100%;}
+}
